@@ -1,0 +1,37 @@
+
+CREATE TABLE employee(e_id int,e_name varchar(10),age int,gender char(10),designation varchar(10),city varchar(10), PRIMARY KEY (e_id));
+INSERT INTO employee(e_id,e_name,age,gender,designation,city)VALUES('1','anil','20','male','ceo','losangeles');
+INSERT INTO employee(e_id,e_name,age,gender,designation,city)VALUES('2','sadhar','-11','male','manager','losangeles');
+INSERT INTO employee(e_id,e_name,age,gender,designation,city)VALUES('3','amala','23','female','foreman','paris');
+INSERT INTO employee(e_id,e_name,age,gender,designation,city)VALUES('4','aneesh','25','male','developer','katakada');
+INSERT INTO employee(e_id,e_name,age,gender,designation,city)VALUES('5','ashiq','28','male','senior','tokyo');
+DROP TABLE employee;
+SELECT * FROM employee;
+ALTER TABLE employee  ALTER COLUMN age int;
+CREATE TABLE projects(e_id int,p_numb int,p_name varchar(10),platform varchar(10),PRIMARY KEY(p_numb));
+INSERT INTO projects(e_id int,p_numb varchar,p_name,platform)VALUES('1','a1','me_card','windows');
+INSERT INTO projects(e_id int,p_numb varchar,p_name,platform)VALUES('2','a2','makk1','mac');
+INSERT INTO projects(e_id int,p_numb varchar,p_name,platform)VALUES('3','a22','me_track','linux');
+INSERT INTO projects(e_id int,p_numb varchar,p_name,platform)VALUES('4','a11','me_card','windows');
+INSERT INTO projects(e_id int,p_numb varchar,p_name,platform)VALUES('5','a21','pegasus','kali linux');
+DELETE FROM projects WHERE platform="kalilinux";
+UPDATE projects SET project = kalilinux, p
+ DECLARE
+ a number;
+ b number;
+ c number;
+ PROCEDURE findMin(x IN number,y IN number,z OUT number) IS
+ BEGIN
+ IF x<y THEN
+ z:=x;
+ ELSE
+ z:=y;
+ END IF;
+ END;
+ BEGIN
+ a:=23;
+ b:=45;
+ findMin(a,b,c);
+ dbms_output.put_line('Minimum of (23,45):'||c);
+ END;
+ /
